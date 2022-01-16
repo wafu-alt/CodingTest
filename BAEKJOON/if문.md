@@ -40,6 +40,24 @@ if (score >= 90) {
 ```
 
 다른사람이 만든건데 이건 맞음 왜 그런지 모르겟음
+해결책 : `else if (60 <= a && a < 69) { console.log("D"); }` 에서 69를 70이라고 고치면 됨
+
+```jsx
+//const fs = require("fs");
+//const input = fs.readFileSync("/dev/stdin").toString().split("\n");
+
+if (90 <= a && a <= 100) {
+  console.log("A");
+} else if (80 <= a && a < 90) {
+  console.log("B");
+} else if (70 <= a && a < 80) {
+  console.log("C");
+} else if (60 <= a && a < 70) {
+  console.log("D");
+} else {
+  console.log("F");
+}
+```
 
 ### 1330번
 
