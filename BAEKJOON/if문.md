@@ -3,29 +3,29 @@
 ![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/f1f230fd-2148-421e-ac16-35fb87fdffb1/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220118%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220118T140944Z&X-Amz-Expires=86400&X-Amz-Signature=08036e4aa84de9c40a0474333f0d2989b421b07ec51244444d70ff0775b0132e&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ```jsx
-const h = Number(prompt());
-const m = Number(prompt());
-//0 <= H <= 23, 0 <= M <= 59
+for (h = 0; h < 24; h++) {
+  for (m = 0; m < 60; m++) {
+    console.log("입력값 : " + h + "시" + m + "분");
 
-console.log("입력값 : " + h + "시" + m + "분");
-
-if ((h < 24 && h > 0) || (h == 0 && m > 45)) {
-  const sum = h * 60 + m;
-  // console.log("1. h가 24보다 작을때 합계 :" + sum);
-  const sum45 = sum - 45;
-  const hour1 = Math.floor(sum45 / 60);
-  const minutes1 = sum45 % 60;
-  console.log("1. 알람값 : " + hour1 + "시" + minutes1 + "분");
-  // console.log(hour1 + " " + minutes1);
-} else if (h == 0 && m < 45) {
-  const hour2 = Number(23);
-  const minutes2 = m + 60 - 45;
-  console.log("2. 알람값(m<45) : " + hour2 + "시" + minutes2 + "분");
-  // console.log(hour2 + " " + minutes2);
+    if ((h < 25 && h > 0) || (h == 0 && m >= 45)) {
+      const sum = h * 60 + m;
+      // console.log("1. h가 24보다 작을때 합계 :" + sum);
+      const sum45 = sum - 45;
+      const hour1 = Math.floor(sum45 / 60);
+      const minutes1 = sum45 % 60;
+      console.log("1. 알람값 : " + hour1 + "시" + minutes1 + "분");
+      // console.log(hour1 + " " + minutes1);
+    } else if (h == 0 && m < 45) {
+      const hour2 = Number(23);
+      const minutes2 = m + 60 - 45;
+      console.log("2. 알람값(m<45) : " + hour2 + "시" + minutes2 + "분");
+      // console.log(hour2 + " " + minutes2);
+    }
+  }
 }
 ```
 
-백준에서 실행이 되지 않는다.
+검산할때 사용
 
 ```jsx
 let input = require("fs").readFileSync("dev/stdin").toString().split(" ");
@@ -33,23 +33,25 @@ let input = require("fs").readFileSync("dev/stdin").toString().split(" ");
 let Hour = Number(input[0]); // Hour
 let Minute = Number(input[1]); // Minute
 
-if ((h < 24 && h > 0) || (h == 0 && m > 45)) {
-  const sum = h * 60 + m;
+if ((Hour < 25 && Hour > 0) || (Hour == 0 && Minute >= 45)) {
+  const sum = Hour * 60 + Minute;
 
   const sum45 = sum - 45;
   const Hour1 = Math.floor(sum45 / 60);
   const Minute1 = sum45 % 60;
 
   console.log(Hour1 + " " + Minute1);
-} else if (h == 0 && m < 45) {
+} else if (Hour == 0 && Minute < 45) {
   const Hour2 = Number(23);
-  const Minute2 = m + 60 - 45;
+  const Minute2 = Minute + 60 - 45;
 
   console.log(Hour2 + " " + Minute2);
 }
 ```
 
-이렇게 돌리면 돌아가는데 틀린다
+정답이 나옴
+
+왜인지 몰라도 변수 외자로 쓰면 안되는것 같음 `const = h;`라던가
 
 ### 14681번
 
