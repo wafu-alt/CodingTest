@@ -19,25 +19,9 @@
       // const m = Number(prompt());
       //0 <= H <= 23, 0 <= M <= 59
 
-      for (h = 0; h < 24; h++) {
-        for (m = 0; m < 60; m++) {
-          console.log("입력값 : " + h + "시" + m + "분");
-
-          if ((h < 25 && h > 0) || (h == 0 && m >= 45)) {
-            const sum = h * 60 + m;
-            // console.log("1. h가 24보다 작을때 합계 :" + sum);
-            const sum45 = sum - 45;
-            const hour1 = Math.floor(sum45 / 60);
-            const minutes1 = sum45 % 60;
-            console.log("1. 알람값 : " + hour1 + "시" + minutes1 + "분");
-            // console.log(hour1 + " " + minutes1);
-          } else if (h == 0 && m < 45) {
-            const hour2 = Number(23);
-            const minutes2 = m + 60 - 45;
-            console.log("2. 알람값(m<45) : " + hour2 + "시" + minutes2 + "분");
-            // console.log(hour2 + " " + minutes2);
-          }
-        }
+      for (i = 1; i < 10; i++) {
+        let result = num * i;
+        console.log(`${num} * ${i} = ${result}`);
       }
 
       //리드라인을 사용 함수 안의 /// 사용 /// 하면됨.
