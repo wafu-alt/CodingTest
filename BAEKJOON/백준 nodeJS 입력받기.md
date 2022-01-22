@@ -8,8 +8,6 @@ https://jb-dailylife.tistory.com/entry/%EB%B0%B1%EC%A4%80-nodejs-nodejs-%EC%9E%8
 
 https://nyang-in.tistory.com/156
 
-https://rrecoder.tistory.com/60
-
 https://leehyungi0622.github.io/2021/03/24/202103/210324-algorithm_javascript_input/
 
 https://goforit.tistory.com/220
@@ -31,6 +29,9 @@ vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드�
 
 1순위
 https://degurii.tistory.com/108
+2순위
+https://rrecoder.tistory.com/60
+
 위 링크들 참고하기
 
 ### 1.입력방식
@@ -40,6 +41,12 @@ https://degurii.tistory.com/108
 ```
 const fs = require('fs');
 const stdin = fs.readFileSync('/dev/stdin').toString().split('\n');
+
+var a = parseInt(input[0]);
+var b = parseInt(input[1]);
+
+
+console.log(a+b);
 ```
 
 -readline 모듈을 이용한 방식
@@ -52,6 +59,8 @@ const rl = readline.createInterface({
 });
 
 rl.on('line', (input) => {
-  console.log(`received: ${input}`);
+
+}).on('close', () => {
+
 });
 ```
