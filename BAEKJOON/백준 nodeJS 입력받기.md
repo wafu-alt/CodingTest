@@ -32,3 +32,26 @@ vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드�
 1순위
 https://degurii.tistory.com/108
 위 링크들 참고하기
+
+### 1.입력방식
+
+-fs모듈을 이용한 방식
+
+```
+const fs = require('fs');
+const stdin = fs.readFileSync('/dev/stdin').toString().split('\n');
+```
+
+-readline 모듈을 이용한 방식
+
+```
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+rl.on('line', (input) => {
+  console.log(`received: ${input}`);
+});
+```
