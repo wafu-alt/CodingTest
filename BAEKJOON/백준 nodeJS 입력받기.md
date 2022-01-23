@@ -2,9 +2,13 @@
 
 ### https://ghost4551.tistory.com/5
 
-https://velog.io/@support/%EB%B0%B1%EC%A4%80node-js-%EC%9E%85%EB%A0%A5-%EB%B0%9B%EA%B8%B0
-
 https://jb-dailylife.tistory.com/entry/%EB%B0%B1%EC%A4%80-nodejs-nodejs-%EC%9E%85%EB%A0%A5-%EB%B0%9B%EA%B8%B0
+
+https://choi95.tistory.com/142
+
+https://velog.io/@nxnaxx/%EB%B0%B1%EC%A4%80baekjoon-Node.js-%EC%9E%85%EC%B6%9C%EB%A0%A5
+
+https://edu.goorm.io/learn/lecture/557/%ED%95%9C-%EB%88%88%EC%97%90-%EB%81%9D%EB%82%B4%EB%8A%94-node-js/lesson/174361/file-system-%EB%AA%A8%EB%93%88
 
 https://nyang-in.tistory.com/156
 
@@ -28,15 +32,19 @@ vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드�
 ```
 
 1순위
+https://velog.io/@support/%EB%B0%B1%EC%A4%80node-js-%EC%9E%85%EB%A0%A5-%EB%B0%9B%EA%B8%B0
+
 https://degurii.tistory.com/108
-2순위
+
 https://rrecoder.tistory.com/60
 
 위 링크들 참고하기
 
 ### 1.입력방식
 
--fs모듈을 이용한 방식
+-fs모듈(File System모듈)을 이용한 방식
+
+nodeJS fs 모듈 api https://nodejs.org/api/fs.html
 
 ```
 const fs = require('fs');
