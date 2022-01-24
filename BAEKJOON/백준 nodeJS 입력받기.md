@@ -57,6 +57,23 @@ var b = parseInt(input[1]);
 console.log(a+b);
 ```
 
+```
+//입력
+5 << input[0]
+1 1 << input[1]
+2 3 << input[2]
+3 4 << input[3]
+9 8 << input[4]
+5 2 << input[5]
+
+const caseNum = inpu[0];
+
+for(i=1; i<=caseNum; i++) {
+  let num = inpu[i].split(' '); //배열을 띄워쓰기로 나눔, '\n'은 열로 나눔(엔터)
+  console.log(Number(num[0]) + Number(num[1]));
+}
+```
+
 -readline 모듈을 이용한 방식
 
 ```
@@ -71,4 +88,16 @@ rl.on('line', (input) => {
 }).on('close', () => {
 
 });
+```
+
+```
+//입력
+5 << input[0]
+1 1 << input[1]
+2 3 << input[2]
+3 4 << input[3]
+9 8 << input[4]
+5 2 << input[5]
+
+
 ```
