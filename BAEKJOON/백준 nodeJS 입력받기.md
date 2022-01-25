@@ -40,9 +40,9 @@ https://rrecoder.tistory.com/60
 
 위 링크들 참고하기
 
-### 1.입력방식
+# 1.입력방식
 
--fs모듈(File System모듈)을 이용한 방식
+##fs모듈(File System모듈)을 이용한 방식
 
 nodeJS fs 모듈 api https://nodejs.org/api/fs.html
 
@@ -57,14 +57,48 @@ var b = parseInt(input[1]);
 console.log(a+b);
 ```
 
+예시)
+
+-코드가 한 줄 일 때
+입력 :
+`5`
+
+` `이 공백을 말함 그것을 `split()`로 구분 <`split()참조 https://www.codingfactory.net/10424>
+
 ```
-//입력
+const fs = require('fs');
+const stdin = fs.readFileSync('/dev/stdin').toString().split(' ');
+```
+
+-코드가 여러줄 일 때 (줄바꿈 들어감)
+입력 :
+
+```
+5
+1
+2
+3
+```
+
+`\n`이 줄바꿈을 말함 그것을 `split()`로 구분
+
+```
+const fs = require('fs');
+const stdin = fs.readFileSync('/dev/stdin').toString().split('\n');
+```
+
+-코드가 종합일때
+
+```
+/*
+입력
 5 << input[0]
 1 1 << input[1]
 2 3 << input[2]
 3 4 << input[3]
 9 8 << input[4]
 5 2 << input[5]
+*/
 
 const caseNum = inpu[0];
 
@@ -74,7 +108,7 @@ for(i=1; i<=caseNum; i++) {
 }
 ```
 
--readline 모듈을 이용한 방식
+##readline 모듈을 이용한 방식
 
 ```
 const readline = require('readline');
@@ -90,14 +124,70 @@ rl.on('line', (input) => {
 });
 ```
 
+예시)
+
 ```
 //입력
-5 << input[0]
-1 1 << input[1]
-2 3 << input[2]
-3 4 << input[3]
-9 8 << input[4]
-5 2 << input[5]
+5
+1 1
+2 3
+3 4
+9 8
+5 2
 
+const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', (input) => {
+  input.push(line); //input 입력 받음
+  //['5' , ['1 1'] , ['2 3'] , ['3 4'] , ['9 8'] , ['5 2']]
+
+}).on('close', () => {
+  let count = Nuber(input[0]); // 제일 처음 5를 가져옴
+  let numbers = [];
+
+  for (let i = 1; i<=count; i++) {
+    numbers.push(input[i].split(' '));
+    //배열을 하나의 인덱스를 지정하고 ' '빈칸 기준으로 각각 나눔. 그리고 다시 배열로 만듬
+    //numbers = [ ['1' , '1'] , ['2' , ' 3'] , ['3' , ' 4'] , ['9' , ' 8'] , ['5' , ' 2']];
+  }
+
+  for (let i =1; i<= count; i++) {
+    console.log( num1 + num2);
+  }
+
+  process.exit();
+});
+
+```
+
+```
+const readline = require('readline');
+const rl = readline.createInterface({
+    input:process.stdin,
+    output:process.stdout
+});
+
+let answer = ''; // 변수 answer을 공백으로 넣음
+
+rl.on('line', line=>{
+  //솔루션
+    const input = line.split(' ');
+
+    if(input.length===2){
+        const A = Number(input[0]);
+        const B = Number(input[1]);
+        answer += A+B + '\n';
+    }
+}).on('close', ()=>{
+  //출력
+    console.log(answer);
+    process.exit();
+})
 
 ```
