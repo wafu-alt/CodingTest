@@ -48,7 +48,7 @@ nodeJS fs 모듈 api https://nodejs.org/api/fs.html
 
 ```
 const fs = require('fs');
-const stdin = fs.readFileSync('/dev/stdin').toString().split('\n');
+const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
 var a = parseInt(input[0]);
 var b = parseInt(input[1]);
@@ -67,7 +67,7 @@ console.log(a+b);
 
 ```
 const fs = require('fs');
-const stdin = fs.readFileSync('/dev/stdin').toString().split(' ');
+const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 ```
 
 -코드가 여러줄 일 때 (줄바꿈 들어감)
@@ -191,3 +191,12 @@ rl.on('line', line=>{
 })
 
 ```
+
+node 설치후
+
+node -v로 버젼 확인
+
+test.js있는 파일 경로에 가서 (cd f/study_design/'github desktop'/CodingTest/BAEKJOON)
+node test.js로 js파일 실행
+
+![jpg](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2d97a511-c99e-4ea2-888f-8502770020c5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220126T135941Z&X-Amz-Expires=86400&X-Amz-Signature=1504c9055e11786392c5329a41e3a82ee90ce43f83e745853191db6bb8649c58&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
