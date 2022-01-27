@@ -111,6 +111,8 @@ for(i=1; i<=caseNum; i++) {
 
 ## readline 모듈을 이용한 방식
 
+https://ghost4551.tistory.com/5 이거 참조하기
+
 ```
 const readline = require('readline');
 const rl = readline.createInterface({
