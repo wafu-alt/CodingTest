@@ -63,7 +63,8 @@ console.log(a+b);
 입력 :
 `5`
 
-&#96; &#96; \` \`이 공백을 말함 그것을 `split()`로 구분 <`split()참조 https://www.codingfactory.net/10424>
+\` \`이 공백을 말함 그것을 `split()`로 구분
+<`split()참조 https://www.codingfactory.net/10424>
 
 ```
 const fs = require('fs');
@@ -208,4 +209,12 @@ node test.js로 js파일 실행
 ```
 const fs = require("fs");
 const input = fs.readFileSync("입력txt파일의 경로").toString().split("\n");
+```
+
+의미 알아보기 `process.platform === "linux" ? "/dev/stdin" : "./input.txt";`
+
+```
+const fs = require('fs');
+process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().trim().split('\r\n');
 ```
