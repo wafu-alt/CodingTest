@@ -42,7 +42,7 @@ https://rrecoder.tistory.com/60
 
 # 1.입력방식
 
-##fs모듈(File System모듈)을 이용한 방식
+## fs모듈(File System모듈)을 이용한 방식
 
 nodeJS fs 모듈 api https://nodejs.org/api/fs.html
 
@@ -63,7 +63,7 @@ console.log(a+b);
 입력 :
 `5`
 
-` `이 공백을 말함 그것을 `split()`로 구분 <`split()참조 https://www.codingfactory.net/10424>
+&#96; &#96; \` \`이 공백을 말함 그것을 `split()`로 구분 <`split()참조 https://www.codingfactory.net/10424>
 
 ```
 const fs = require('fs');
@@ -108,7 +108,7 @@ for(i=1; i<=caseNum; i++) {
 }
 ```
 
-##readline 모듈을 이용한 방식
+## readline 모듈을 이용한 방식
 
 ```
 const readline = require('readline');
@@ -192,6 +192,8 @@ rl.on('line', line=>{
 
 ```
 
+## fs모듈 사용해보기
+
 node 설치후
 
 node -v로 버젼 확인
@@ -200,3 +202,10 @@ test.js있는 파일 경로에 가서 (cd f/study_design/'github desktop'/Coding
 node test.js로 js파일 실행
 
 ![jpg](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2d97a511-c99e-4ea2-888f-8502770020c5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220126T135941Z&X-Amz-Expires=86400&X-Amz-Signature=1504c9055e11786392c5329a41e3a82ee90ce43f83e745853191db6bb8649c58&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
+
+- test.js 파일
+
+```
+const fs = require("fs");
+const input = fs.readFileSync("입력txt파일의 경로").toString().split("\n");
+```
