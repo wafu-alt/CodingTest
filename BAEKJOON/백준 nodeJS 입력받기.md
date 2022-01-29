@@ -86,6 +86,7 @@ rl.on('line', (input) => {
 ```
 
 예시)
+리드라인 예시 수정. 리드라인 다운받고 해보기
 
 ```
 //입력
@@ -191,6 +192,28 @@ let input = fs.readFileSync(filePath).toString().split("\n");
 // 출력 결과는 항상 console.log를 통해서 전달합니다.
 vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드를 작성할 때는 "./input.txt"의 data input을 받아와 테스트를 진행하고 제출 하는 용도인 경우 "/dev/stdin"으로 받아오게 됩니다.
 ```
+
+```
+console.log("text box");
+
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+rl.on("line", (input) => {
+  //입력 > 변수선언
+  console.log(input);
+}).on("close", () => {
+  //솔루션
+  console.log("close 터미널에서 ctrl + d 했을때 이 문구 출력");
+  process.exit();
+});
+
+```
+
+![jpg](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/8049bb08-c0ed-4d18-899a-6df5dc15bccd/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220129%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220129T130429Z&X-Amz-Expires=86400&X-Amz-Signature=86d9ebe4c9933b90920ede41bcec873882480259fd46fa53545ce1908331eb93&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ## 참조사이트
 
