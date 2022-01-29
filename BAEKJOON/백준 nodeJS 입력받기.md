@@ -21,7 +21,7 @@ console.log(a+b);
 입력 :
 `5`
 
-\` \`이 공백을 말함 그것을 `split()`로 구분
+`\` \``이 공백을 말함 그것을 `split()`로 구분
 <`split()참조 https://www.codingfactory.net/10424>
 
 ```
