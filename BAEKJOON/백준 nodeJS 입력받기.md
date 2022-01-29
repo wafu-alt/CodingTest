@@ -8,28 +8,25 @@ nodeJS fs 모듈 api https://nodejs.org/api/fs.html
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
-var a = parseInt(input[0]);
-var b = parseInt(input[1]);
-
-
-console.log(a+b);
 ```
+위와 같이 fs모듈을 코드로 불러와서 사용한다.
+`fs.readFileSync('/dev/stdin')` fs모듈에 readFileSync(동기식 처리)으로  /dev/stdin 경로의 파일을 불러온다.
+불러와서 문자열toString()로 불러온다. 문자열로 불러와 .split()으로 구분한다.
+
+참고로 비동기는 readFile()로 불러오면 된다.
 
 예시)
 
--코드가 한 줄 일 때
+-코드가 한 줄 일 때, \`` `\`이 공백으로 구분 <`split()참조 https://www.codingfactory.net/10424>
 입력 :
 `5`
-
-\`` `\`이 공백을 말함 그것을 `split()`로 구분
-<`split()참조 https://www.codingfactory.net/10424>
 
 ```
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 ```
 
--코드가 여러줄 일 때 (줄바꿈 들어감)
+-코드가 여러줄 일 때 (줄바꿈 들어감) `\n`이 줄바꿈(이스케이프 문자 = New line)으로 구분
 입력 :
 
 ```
@@ -38,8 +35,6 @@ const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 2
 3
 ```
-
-`\n`이 줄바꿈을 말함 그것을 `split()`로 구분
 
 ```
 const fs = require('fs');
