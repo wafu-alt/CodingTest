@@ -15,9 +15,9 @@ const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
 참고로 비동기는 readFile()로 불러오면 된다.
 
-예시)
+### 예시)
 
--코드가 한 줄 일 때, \`` `\`이 공백으로 구분 <`split()참조 https://www.codingfactory.net/10424>
+- 한 줄 일 때, \`` `\`이 공백으로 구분 <`split()참조 https://www.codingfactory.net/10424>
 입력 :
 `5`
 
@@ -26,7 +26,7 @@ const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 ```
 
--코드가 여러줄 일 때 (줄바꿈 들어감) `\n`이 줄바꿈(이스케이프 문자 = New line)으로 구분
+-입력이 여러줄 일 때 (줄바꿈 들어감) `\n`이 줄바꿈(이스케이프 문자 = New line)으로 구분
 입력 :
 
 ```
@@ -41,7 +41,7 @@ const fs = require('fs');
 const stdin = fs.readFileSync('/dev/stdin').toString().split('\n');
 ```
 
--코드가 종합일때
+-입력이 복합적일 때
 
 ```
 /*
@@ -64,8 +64,6 @@ for(i=1; i<=caseNum; i++) {
 
 ## readline 모듈을 이용한 방식
 
-https://ghost4551.tistory.com/5 이거 참조하기
-
 ```
 const readline = require('readline');
 const rl = readline.createInterface({
@@ -73,14 +71,19 @@ const rl = readline.createInterface({
   output: process.stdout
 });
 
+let input; //input 변수에 할당받기
+
 rl.on('line', (input) => {
-
+  //문자열 입력되는 공간, 입력받은것을 타입변환 혹은 나눠서 다른 변수 입력하는 공간을 여기에서 사용한다.
 }).on('close', () => {
-
+  //해결책을 입력하는 공간
+  process.exit();
 });
 ```
 
-예시)
+### 예시)
+
+-입력이 복합적일 때
 
 ```
 //입력
