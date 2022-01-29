@@ -80,16 +80,9 @@ rl.on('line', (input) => {
 });
 ```
 
-<<<<<<< HEAD
-예시)
-리드라인 예시 수정.
-=======
-
 ### 예시)
 
 -입력이 복합적일 때
-
-> > > > > > > d38cce23d3792f04fe55e079f87c613664b521f6
 
 ```
 //입력
@@ -196,8 +189,10 @@ let input = fs.readFileSync(filePath).toString().split("\n");
 vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드를 작성할 때는 "./input.txt"의 data input을 받아와 테스트를 진행하고 제출 하는 용도인 경우 "/dev/stdin"으로 받아오게 됩니다.
 ```
 
+## readline모듈 사용해보기
+
 ```
-console.log("text box");
+console.log("text box"); //est.js가 잘 되었는지 확인
 
 const readline = require("readline");
 const rl = readline.createInterface({
@@ -206,11 +201,14 @@ const rl = readline.createInterface({
 });
 
 rl.on("line", (input) => {
-  //입력 > 변수선언
+
+  //입력 받으면 input으로 넘어가고 줄바꾸면 바로 console.log에서 출력이 된다.
   console.log(input);
+
 }).on("close", () => {
-  //솔루션
+
   console.log("close 터미널에서 ctrl + d 했을때 이 문구 출력");
+
   process.exit();
 });
 
