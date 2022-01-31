@@ -154,7 +154,7 @@ rl.on('line', line=>{
 
 ## fs모듈 사용해보기
 
-node 설치후
+node 설치 후
 
 node -v로 버젼 확인
 
