@@ -152,6 +152,8 @@ rl.on('line', line=>{
 
 ```
 
+---
+
 ## fs모듈 사용해보기
 
 node 설치 후
@@ -188,6 +190,8 @@ let input = fs.readFileSync(filePath).toString().split("\n");
 // 출력 결과는 항상 console.log를 통해서 전달합니다.
 vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드를 작성할 때는 "./input.txt"의 data input을 받아와 테스트를 진행하고 제출 하는 용도인 경우 "/dev/stdin"으로 받아오게 됩니다.
 ```
+
+---
 
 ## readline모듈 사용해보기
 
