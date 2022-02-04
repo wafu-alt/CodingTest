@@ -18,7 +18,9 @@ const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
 ### 예시)
 
-- 한 줄 일 때, \`` `\`이 공백으로 구분 <`split()참조 https://www.codingfactory.net/10424> 입력 : `5`
+- 한 줄 일 때, \`` `\`이 공백으로 구분 <`split()참조 : https://www.codingfactory.net/10424>
+
+입력 : `5`
 
 ```
 const fs = require('fs');
@@ -26,9 +28,7 @@ const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 ```
 
 -입력이 여러줄 일 때 (줄바꿈 들어감) `\n`이 줄바꿈(이스케이프 문자 = New line)으로 구분
-입력 :
-
-```
+입력 :```
 5
 1
 2
