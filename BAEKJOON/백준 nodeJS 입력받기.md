@@ -208,7 +208,7 @@ const rl = readline.createInterface({
 rl.on("line", (input) => {
 
   //입력 받으면 input으로 넘어가고 줄바꾸면 바로 console.log에서 출력이 된다.
-  console.log(input);
+  console.log("입력받은걸 바로 출력하기 : " + input);
 
 }).on("close", () => {
 
