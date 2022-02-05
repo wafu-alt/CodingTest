@@ -29,6 +29,7 @@ const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 
 -입력이 여러줄 일 때 (줄바꿈 들어감) `\n`이 줄바꿈(이스케이프 문자 = New line)으로 구분
 입력 :
+
 ```
 5
 1
@@ -218,8 +219,8 @@ rl.on("line", (input) => {
 });
 
 ```
-![1](https://user-images.githubusercontent.com/83447120/152511769-f9bd69e5-c375-47d1-96d6-b3e6e00e6c77.jpg)
 
+![1](https://user-images.githubusercontent.com/83447120/152511769-f9bd69e5-c375-47d1-96d6-b3e6e00e6c77.jpg)
 
 ## 참조사이트
 
@@ -246,3 +247,5 @@ https://velog.io/@support/%EB%B0%B1%EC%A4%80node-js-%EC%9E%85%EB%A0%A5-%EB%B0%9B
 https://degurii.tistory.com/108
 
 https://rrecoder.tistory.com/60
+
+해봐야할것 : 로직대로 움직이는지 text.js와 test.txt를 이용해서 실험해볼것
