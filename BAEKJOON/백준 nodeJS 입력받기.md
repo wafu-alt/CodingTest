@@ -249,3 +249,5 @@ https://degurii.tistory.com/108
 https://rrecoder.tistory.com/60
 
 해봐야할것 : 로직대로 움직이는지 text.js와 test.txt를 이용해서 실험해볼것
+
+https://www.youtube.com/watch?v=5xTHp0wgilU
