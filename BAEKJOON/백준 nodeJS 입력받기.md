@@ -209,31 +209,53 @@ vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드�
 ---
 
 # 3.readline모듈 사용해보기
-
+- 한 줄 일때
 ```
-console.log("text box"); //est.js가 잘 되었는지 확인
-
 const readline = require("readline");
+
 const rl = readline.createInterface({
   input: process.stdin,
   output: process.stdout,
 });
 
-rl.on("line", (input) => {
+let input = [];
 
-  //입력 받으면 input으로 넘어가고 줄바꾸면 바로 console.log에서 출력이 된다.
-  console.log("입력받은걸 바로 출력하기 : " + input);
-
-}).on("close", () => {
-
-  console.log("close 터미널에서 ctrl + d 했을때 이 문구 출력");
+rl.on("line", function (line) {
+  // input = line;//한 줄일때 가능
+    
+}).on("close", function () {
+  console.log(input);
 
   process.exit();
 });
 
-```
 
-![1](https://user-images.githubusercontent.com/83447120/152511769-f9bd69e5-c375-47d1-96d6-b3e6e00e6c77.jpg)
+```
+![image](https://user-images.githubusercontent.com/83447120/152973762-e5d7a954-804b-4768-8270-0a296f55f57b.png)
+
+- 복합적인 입력일 때
+```
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+let input = [];
+
+rl.on("line", function (line) {
+  input.push(line); 
+  // input = line;//한 줄일때 가능
+}).on("close", function () {
+  console.log(input);
+
+  process.exit();
+});
+```
+![image](https://user-images.githubusercontent.com/83447120/152973891-dbbba15b-217c-429d-8f52-701b693d20d7.png)
+
+
 
 ## 참조사이트
 
@@ -260,7 +282,5 @@ https://velog.io/@support/%EB%B0%B1%EC%A4%80node-js-%EC%9E%85%EB%A0%A5-%EB%B0%9B
 https://degurii.tistory.com/108
 
 https://rrecoder.tistory.com/60
-
-해봐야할것 : 로직대로 움직이는지 text.js와 test.txt를 이용해서 실험해볼것
 
 https://www.youtube.com/watch?v=5xTHp0wgilU
