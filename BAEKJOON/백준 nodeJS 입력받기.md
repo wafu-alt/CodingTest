@@ -174,6 +174,18 @@ node test.js로 js파일 실행
 const fs = require("fs");
 const input = fs.readFileSync("입력txt파일의 경로").toString().split("\n");
 ```
+위와 같이 `\r`이 남을 경우 줄 바꿈이 `\r\n`으로 들어 왔기 때문이다.   
+그렇기 때문에
+
+```
+const fs = require("fs");
+const input = fs.readFileSync("입력txt파일의 경로").toString().split("\r\n");
+```
+바꾸면
+![image](https://user-images.githubusercontent.com/83447120/152969202-6a3ef03f-ea65-47ba-8d4c-ce3cef85ef41.png)
+
+
+
 
 ## 삼항연산자 의미 알아보기 `process.platform === "linux" ? "/dev/stdin" : "./input.txt";`
 
@@ -196,7 +208,7 @@ vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드�
 
 ---
 
-## readline모듈 사용해보기
+# 3.readline모듈 사용해보기
 
 ```
 console.log("text box"); //est.js가 잘 되었는지 확인
