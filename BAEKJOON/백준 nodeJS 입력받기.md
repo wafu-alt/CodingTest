@@ -18,7 +18,7 @@ const input = fs.readFileSync('/dev/stdin').toString().split('\n');
 
 ### 예시)
 
-- 한 줄 일 때, \`` `\`이 공백으로 구분 <`split()참조 : https://www.codingfactory.net/10424>
+- 한 줄 일 때, \`` `\`이 공백으로 구분 <`split()`참조 : https://www.codingfactory.net/10424>
 
 입력 : `5`
 
@@ -27,8 +27,8 @@ const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split(' ');
 ```
 
--입력이 여러줄 일 때 (줄바꿈 들어감) `\n`이 줄바꿈(이스케이프 문자 = New line)으로 구분
-입력 :
+- 입력이 여러줄 일 때 (줄바꿈 들어감) `\n`이 줄바꿈(이스케이프 문자 = New line)으로 구분
+  입력 :
 
 ```
 5
@@ -42,7 +42,7 @@ const fs = require('fs');
 const stdin = fs.readFileSync('/dev/stdin').toString().split('\n');
 ```
 
--입력이 복합적일 때
+- 입력이 복합적일 때
 
 ```
 /*
@@ -84,7 +84,7 @@ rl.on('line', (input) => {
 
 ### 예시)
 
--입력이 복합적일 때
+- 입력이 복합적일 때
 
 ```
 //입력
@@ -156,11 +156,12 @@ rl.on('line', line=>{
 
 ---
 
-## fs모듈 사용해보기
+# 2.fs모듈 사용해보기
 
 node 설치 후
 
-node -v로 버젼 확인
+node -v
+npm -v 로 버젼 확인
 
 test.js있는 파일 경로에 가서 (cd f/study_design/'github desktop'/CodingTest/BAEKJOON)
 node test.js로 js파일 실행
