@@ -162,6 +162,8 @@ node 설치 후
 
 node -v
 npm -v 로 버젼 확인
+터미널로 `npm install fs` fs모듈 설치
+![npm install fs](https://user-images.githubusercontent.com/83447120/153127459-39284e58-ccc4-4705-9b00-34054aaa3fdf.jpg)
 
 test.js있는 파일 경로에 가서 (cd f/study_design/'github desktop'/CodingTest/BAEKJOON)
 node test.js로 js파일 실행
@@ -209,6 +211,10 @@ vscode에서 input.txt 파일을 생성하여, vscode에서 테스트용 코드�
 ---
 
 # 3.readline모듈 사용해보기
+
+터미널로 `npm install linebyline` readline설치
+![npm install](https://user-images.githubusercontent.com/83447120/153127571-2cecd662-8d69-4c22-8733-f4a24806a7eb.jpg)
+
 - 한 줄 일때
 ```
 const readline = require("readline");
