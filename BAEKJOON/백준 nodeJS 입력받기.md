@@ -161,7 +161,7 @@ rl.on('line', line=>{
 node 설치 후
 
 node -v
-npm -v 로 버젼 확인
+npm -v 로 버젼 확인   
 터미널로 `npm install fs` fs모듈 설치
 ![npm install fs](https://user-images.githubusercontent.com/83447120/153127459-39284e58-ccc4-4705-9b00-34054aaa3fdf.jpg)
 
