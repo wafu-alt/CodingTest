@@ -1,4 +1,52 @@
+### 8393번
+
+## 문제
+
+n이 주어졌을 때, 1부터 n까지 합을 구하는 프로그램을 작성하시오.
+
+## 입력
+
+첫째 줄에 n (1 ≤ n ≤ 10,000)이 주어진다.
+
+## 출력
+
+1부터 n까지 합을 출력한다.
+
+## 예제 입력 1
+
+```
+3
+
+```
+
+## 예제 출력 1
+
+```
+6
+```
+
+## 답
+
+---
+
+```jsx
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().split(" ");
+
+input = +input;
+//console.log(input);
+let sumNum = +0;
+
+for (i = 1; i <= input; i++) {
+  sumNum += i;
+  //console.log(sumNum, i);
+}
+console.log(sumNum);
+```
+
 ### 10950번
+
 ![image](https://user-images.githubusercontent.com/83447120/153586549-9b1f8b1a-9f24-4a16-b80c-117f31122578.png)
 
 ```jsx
@@ -15,43 +63,12 @@ for (i = 1; i <= cirNum; i++) {
   console.log(Number(Num[0]) + Number(Num[1]));
 }
 ```
+
 - 입력 받은 것을 각각 어떻게 나눠야하는지 핵심이었던 것 같다
 
 ### 2739번
 
-## 문제
-
-N을 입력받은 뒤, 구구단 N단을 출력하는 프로그램을 작성하시오. 출력 형식에 맞춰서 출력하면 된다.
-
-## 입력
-
-첫째 줄에 N이 주어진다. N은 1보다 크거나 같고, 9보다 작거나 같다.
-
-## 출력
-
-출력형식과 같게 N*1부터 N*9까지 출력한다.
-
-## 예제 입력 1
-
-```
-2
-
-```
-
-## 예제 출력 1
-
-```
-2 * 1 = 2
-2 * 2 = 4
-2 * 3 = 6
-2 * 4 = 8
-2 * 5 = 10
-2 * 6 = 12
-2 * 7 = 14
-2 * 8 = 16
-2 * 9 = 18
-
-```
+![Untitled](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/84240f24-33d6-4e55-b4ef-48ec67ed1d2a/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220211%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220211T114928Z&X-Amz-Expires=86400&X-Amz-Signature=7705324fe277fa337d9fa904429585671f9b918443e408570b7e079f0d37fe9f&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 ```jsx
 const fs = require("fs");
@@ -64,4 +81,3 @@ for (i = 1; i < 10; i++) {
   console.log(`${num} * ${i} = ${result}`);
 }
 ```
-
