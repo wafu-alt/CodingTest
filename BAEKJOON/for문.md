@@ -49,8 +49,43 @@ Python을 사용하고 있다면, `input` 대신 `sys.stdin.readline`을 사�
 ---
 
 ```jsx
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().split("\n");
 
+//console.log(input);
+
+const cirNum = input[0];
+
+for (i = 1; i <= cirNum; i++) {
+  let Num = input[i].split(" ");
+
+  console.log(Number(Num[0]) + Number(Num[1]));
+}
 ```
+
+→ 시간초과 일어남
+이유 : for문안에서 돌면서 바로 답을 출력하는데 이것이 숫자가 커져버리면 시간이 많이 걸리게되고, 시간 제한 있는 문제이기 때문에 실패함
+
+```jsx
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().split("\n");
+
+//console.log(input);
+
+const cirNum = input[0];
+let answer = +0;
+
+for (i = 1; i <= cirNum; i++) {
+  let Num = input[i].split(" ");
+
+  answer = answer + (Number(Num[0]) + Number(Num[1])) + "\n";
+}
+console.log(answer);
+```
+
+- 그러므로 위와 같이 한 변수에 저장해놓고 차곡차곡 쌓은 다음 한번에 출력하면 시간이 적게 걸리게 됨
 
 ### 8393번
 
