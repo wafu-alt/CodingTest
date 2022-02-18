@@ -31,6 +31,24 @@
 
 ## 답
 
+---
+
+```jsx
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().split(" ");
+
+input = +input;
+//console.log(input);
+let sumNum = +0;
+
+for (i = 1; i <= input; i++) {
+  sumNum += i;
+  //console.log(sumNum, i);
+}
+console.log(sumNum);
+```
+
 # 2741번
 
 ## 문제
