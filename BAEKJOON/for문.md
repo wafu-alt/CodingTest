@@ -38,8 +38,6 @@ Case #5: 7
 
 ## 답
 
----
-
 ```jsx
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
@@ -90,8 +88,6 @@ for (i = 1; i <= cirNum; i++) {
 
 ## 답
 
----
-
 ```jsx
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
@@ -108,7 +104,7 @@ for (i = 1; i <= input; i++) {
 console.log(sumNum);
 ```
 
-===
+---
 
 # 2741번
 
@@ -161,6 +157,8 @@ console.log(answer);
 
 - 시간초과를 방지하기 위해 한번에 묶어서 출력
 
+---
+
 # 15552번
 
 ## 문제
@@ -211,8 +209,6 @@ Python을 사용하고 있다면, `input` 대신 `sys.stdin.readline`을 사�
 
 ## 답
 
----
-
 ```jsx
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
@@ -251,6 +247,8 @@ console.log(answer);
 ```
 
 - 그러므로 위와 같이 한 변수에 저장해놓고 차곡차곡 쌓은 다음 한번에 출력하면 시간이 적게 걸리게 됨
+
+---
 
 # 8393번
 
@@ -299,6 +297,8 @@ for (i = 1; i <= input; i++) {
 console.log(sumNum);
 ```
 
+---
+
 # 10950번
 
 ![image](https://user-images.githubusercontent.com/83447120/153586549-9b1f8b1a-9f24-4a16-b80c-117f31122578.png)
@@ -319,6 +319,8 @@ for (i = 1; i <= cirNum; i++) {
 ```
 
 - 입력 받은 것을 각각 어떻게 나눠야하는지 핵심이었던 것 같다
+
+---
 
 # 2739번
 
