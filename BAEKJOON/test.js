@@ -1,19 +1,19 @@
-console.log("text box");
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().split(" ");
 
-// const fs = require("fs");
-// const input = fs.readFileSync("input.txt").toString().split("\n");
+//console.log(input);
 
-const readline = require("readline");
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+let star = "";
+let blank = " ";
 
-rl.on("line", (input) => {
-  //입력 > 변수선언
-  console.log(input);
-}).on("close", () => {
-  //솔루션
-  console.log("close 터미널에서 ctrl + d 했을때 이 문구 출력");
-  process.exit();
-});
+for (i = 1; i <= input; i++) {
+  star = star + "*"; //star += "*";
+  let j = "";
+  j = input - i;
+  console.log(j);
+  for (j; j == input; j--) {
+    console.log("a");
+  }
+  console.log(star);
+}
