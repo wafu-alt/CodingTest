@@ -1,3 +1,62 @@
+# 2439번
+
+## 문제
+
+첫째 줄에는 별 1개, 둘째 줄에는 별 2개, N번째 줄에는 별 N개를 찍는 문제
+
+하지만, 오른쪽을 기준으로 정렬한 별(예제 참고)을 출력하시오.
+
+## 입력
+
+첫째 줄에 N(1 ≤ N ≤ 100)이 주어진다.
+
+## 출력
+
+첫째 줄부터 N번째 줄까지 차례대로 별을 출력한다.
+
+## 예제 입력 1
+
+```
+5
+
+```
+
+## 예제 출력 1
+
+```
+    *
+   **
+  ***
+ ****
+*****
+```
+
+## 답
+
+```jsx
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().split(" ");
+
+//console.log(input);
+
+let star = "";
+
+for (i = 1; i <= input; i++) {
+  let j = "";
+  let blank = "";
+  for (j = input - i; j >= 1; j--) {
+    blank += " ";
+  }
+  star = star + "*";
+  console.log(blank + star);
+}
+```
+
+- 빈칸을 어떻게 넣어야할지 고민 많이했고, 지역변수와 for문 사용에 좀 더 신경을 쓰게 되었다
+
+---
+
 # 2438번
 
 ## 문제
