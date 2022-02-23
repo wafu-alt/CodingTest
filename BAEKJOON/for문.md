@@ -31,7 +31,30 @@ X보다 작은 수를 입력받은 순서대로 공백으로 구분해 출력한
 ## 답
 
 ```jsx
+const fs = require("fs");
+const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
+let input = fs.readFileSync(filePath).toString().split("\n");
+//console.log(input);
 
+// 엔터로 나눈 배열을 띄워쓰기로 각 배열 순서로 나누기
+let firstN = "";
+let sequence = "";
+let answer = "";
+firstN = input[0].split(" ");
+//console.log(firstN);
+sequence = input[1].split(" ");
+//console.log(sequence);
+
+for (i = 0; i < +firstN[0]; i++) {
+  if (firstN[1] > +sequence[i]) {
+    answer = answer + sequence[i] + " ";
+    //console.log(sequence[i], answer);
+  } else {
+    //console.log("not " + sequence[i]);
+  }
+}
+
+console.log(answer);
 ```
 
 ---
