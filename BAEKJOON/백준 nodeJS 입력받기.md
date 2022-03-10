@@ -226,8 +226,8 @@ const rl = readline.createInterface({
 let input = [];
 
 rl.on("line", function (line) {
-  // input = line;//한 줄일때 가능
-    
+  input = line;//한 줄일때 가능
+  rl.close();  // 엔터 하면 입력 끝남
 }).on("close", function () {
   console.log(input);
 
