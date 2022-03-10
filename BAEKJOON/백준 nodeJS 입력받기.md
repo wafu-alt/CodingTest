@@ -168,7 +168,6 @@ npm -v 로 버젼 확인
 test.js있는 파일 경로에 가서 (cd f/study_design/'github desktop'/CodingTest/BAEKJOON)
 node test.js로 js파일 실행
 
-![jpg](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/2d97a511-c99e-4ea2-888f-8502770020c5/Untitled.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220126%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220126T135941Z&X-Amz-Expires=86400&X-Amz-Signature=1504c9055e11786392c5329a41e3a82ee90ce43f83e745853191db6bb8649c58&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Untitled.png%22&x-id=GetObject)
 
 - test.js 파일
 
@@ -260,6 +259,38 @@ rl.on("line", function (line) {
 });
 ```
 ![image](https://user-images.githubusercontent.com/83447120/152973891-dbbba15b-217c-429d-8f52-701b693d20d7.png)
+
+
+- 여러줄 입력 받기 (첫번째 입력은 몇줄 입력받을지 제한 검)
+
+```
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+let input=[];
+let N = 0;
+var count = 0;
+rl.on("line", function (x) {
+  count += 1;
+  if (count === 1){
+    N = x;
+  } else {
+    input.push(x);
+  }
+  
+  if (count > N) {
+    rl.close();
+  }
+}).on("close", function () {
+  console.log(input.join(""));
+  process.exit();
+});
+```
+![1](https://user-images.githubusercontent.com/83447120/157599584-3d89a6ec-138b-4283-b158-2fb149e02709.jpg)
 
 
 
