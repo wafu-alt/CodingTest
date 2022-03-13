@@ -291,8 +291,33 @@ rl.on("line", function (x) {
 });
 ```
 ![1](https://user-images.githubusercontent.com/83447120/157599584-3d89a6ec-138b-4283-b158-2fb149e02709.jpg)
+   
+- 제한적인 입력방식   
 
+```
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
 
+let input = [];
+let N = 0;
+var count = 0;
+rl.on("line", function (x) {
+  
+    input.push(x); // 들어오는 값을 input에 밀어넣음
+
+  if (count == 1 ) {  // 처음 받고 그 다음 1 스택일때 닫는다.
+    rl.close();
+  }
+  count += 1; // 엔터 누를때마다 1스택씩 쌓는다
+}).on("close", function () {
+  console.log(input.join(""));
+  process.exit();
+});
+
+```
 
 ## 참조사이트
 
