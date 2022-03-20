@@ -46,7 +46,28 @@ rl.on("line", (line) => {
   process.exit();
 });
 */
-let test =
-  "난 안 촉촉한 초코칩보다 촉촉한 초코칩이 좋기 때문에 촉촉한 초코칩을 사 먹을 거야";
 
-console.log(/대나무 빨대/.includes(test));
+// fruits 배열을 만들어 과일들을 입력받고, fruits 배열에서 콩과 무를 제거하세요.
+// 과일이 아닌 것을 잘 제거했는지 console.log를 통해 배열을 출력해 확인해봅니다.
+
+const readline = require("readline");
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+});
+
+let fruits = [];
+let result = [];
+var count = 0;
+rl.on("line", function (x) {
+  fruits = x;
+
+  rl.close();
+}).on("close", function () {
+  fruits = fruits.split(" ");
+  console.log(fruits);
+  result = fruits.filter((element) => element !== "콩" && element !== "무");
+
+  console.log(result);
+  process.exit();
+});

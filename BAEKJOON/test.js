@@ -4,14 +4,11 @@ let input = fs.readFileSync(filePath).toString().split("\r\n");
 
 //console.log(input);
 
-function searchSelfNum() {
-  let firstNum = "1";
-  let number = 0;
+let cirNum = parseInt(input[0]);
 
-  return firstNum[0];
+let arry = [];
+for (i = 1; i <= cirNum; i++) {
+  arry = input[i].split(" ");
+  for (j)
 }
-
-for (i = 1; i < 50; i++) {
-  searchSelfNum(i);
-}
-console.log();
+console.log(arry);
