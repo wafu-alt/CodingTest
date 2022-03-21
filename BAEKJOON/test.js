@@ -7,8 +7,17 @@ let input = fs.readFileSync(filePath).toString().split("\r\n");
 let cirNum = parseInt(input[0]);
 
 let arry = [];
+let str;
+let strArr = [];
 for (i = 1; i <= cirNum; i++) {
   arry = input[i].split(" ");
-  for (j)
+  str = arry[1];
+  //console.log(str);
+  for (j = 0; j < str.length; j++) {
+    for (k = 0; k < arry[0]; k++) {
+      strArr[j] += str[j];
+    }
+  }
 }
-console.log(arry);
+console.log(strArr);
+//console.log(arry);
