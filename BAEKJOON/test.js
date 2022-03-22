@@ -15,9 +15,27 @@ for (i = 1; i <= cirNum; i++) {
   //console.log(str);
   for (j = 0; j < str.length; j++) {
     for (k = 0; k < arry[0]; k++) {
-      strArr[j] += str[j];
+      strArr += str[j];
     }
   }
 }
 console.log(strArr);
 //console.log(arry);
+
+/*
+const num1 = input.shift();
+
+for (let i = 0; i < num1; i++) {
+    let answer = '';
+    
+    const [num2, str] = input[i].split(" ");
+    
+    for (let j = 0; j < str.length; j++) {
+        for (let c = 0; c < num2; c++) {
+            answer += str[j];
+  	}
+    }
+    
+    console.log(answer);
+}
+*/
