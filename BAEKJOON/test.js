@@ -8,18 +8,18 @@ let cirNum = parseInt(input[0]);
 
 let arry = [];
 let str;
-let strArr = [];
 for (i = 1; i <= cirNum; i++) {
   arry = input[i].split(" ");
   str = arry[1];
+  let strArr = [];
   //console.log(str);
   for (j = 0; j < str.length; j++) {
     for (k = 0; k < arry[0]; k++) {
       strArr += str[j];
     }
   }
+  console.log(strArr);
 }
-console.log(strArr);
 //console.log(arry);
 
 /*
