@@ -3,6 +3,8 @@ const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
 let input = fs.readFileSync(filePath).toString();
 
 console.log(input);
+const result = new Array(26).fill(0);
+console.log(result);
 /*
 const result = new Array(26).fill(0);
 
