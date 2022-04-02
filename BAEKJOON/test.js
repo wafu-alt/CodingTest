@@ -4,12 +4,12 @@ let input = fs.readFileSync(filePath).toString();
 
 console.log(input);
 const result = new Array(26).fill(0);
-console.log(result);
+console.log(result, result.length);
 for (let i = 0; i < input.length; i++) {
   result[input.charCodeAt(i) - 97]++;
-  console.log(i, result);
+  //console.log(i, result);
 }
-console.log(result);
+console.log(result, result.length);
 
 /*
 const result = new Array(26).fill(0);
