@@ -1,11 +1,12 @@
 const fs = require("fs");
 const filePath = process.platform === "linux" ? "/dev/stdin" : "./input.txt";
-let input = fs.readFileSync(filePath).toString();
+let input = fs.readFileSync(filePath).toString().toLowerCase();
+//.toLowerCase() 대문자 입력을 소문자로 바꿔준다
 
-console.log(input);
+//console.log(input);
 const result = new Array(26).fill(0); // result를 26자리의 배열로 만들고 0으로 채우기
 //26인 이유 : 알파벳이 26개임
-console.log(result, result.length);
+//console.log(result, result.length);
 for (let i = 0; i < input.length; i++) {
   result[input.charCodeAt(i) - 97]++; // input값의 글자 자릿수를 숫자로 변환하고 97(a)만큼 뺀다 그러면 알파벳 순서에 맞게 카운팅이 올라감
   /*
@@ -15,23 +16,23 @@ for (let i = 0; i < input.length; i++) {
   */
   //console.log(i, result);
 }
-console.log(result);
+//console.log(result);
 
 const max = Math.max(...result); // 배열에서 최대값 출력
 const index = result.indexOf(max); // 최대값으로 검색. 위차값 출력
 
-console.log(max, index);
+//console.log(max, index);
 
 let isSame = false;
 
 for (let j = 0; j < 26; j++) {
   if (result[j] === max && index != j) {
     isSame = true; //기본값 false에서 조건에 맞으면 true로 바꾸고 break로 빠져나옴
-    break;
-    console.log(result[j], index, j);
+    //console.log(result[j], index, j);
     break;
   }
 }
-
+//console.log(isSame);
 console.log(isSame ? "?" : String.fromCharCode(index + 65));
 //isSame이 참이면 ?출력 , 아니면 영어 대문자로 출력
+//참이라는 말은 최대값이 여러개라는 말임 최소 2개이상
