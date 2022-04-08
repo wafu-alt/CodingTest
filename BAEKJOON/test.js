@@ -17,6 +17,21 @@ for (let i = 0; i < input.length; i++) {
 }
 console.log(result);
 
+const max = Math.max(...result); // 배열에서 최대값 출력
+const index = result.indexOf(max); // 최대값으로 검색. 위차값 출력
+
+console.log(max, index);
+
+let isSame = false;
+
+for (let j = 0; j < 26; j++) {
+  if (result[j] === max && index != j) {
+    isSame = true;
+    console.log(result[j], index);
+    break;
+  }
+}
+
 /*
 const result = new Array(26).fill(0);
 
@@ -27,14 +42,15 @@ for (let i = 0; i < input.length; i++) {
 const max = Math.max(...result); // 배열에서 최대값 출력
 const index = result.indexOf(max); // 최대값으로 검색. 위차값 출력
 
-let isSame = false;
+let isSame = false; 
 
 for (let j = 0; j < 26; j++) {
   if (result[j] === max && index != j) {
-    isSame = true;
+    isSame = true; //기본값 false에서 조건에 맞으면 true로 바꾸고 break로 빠져나옴
     break;
   }
 }
 
 console.log(isSame ? "?" : String.fromCharCode(index + 65));
+//isSame이 참이면 ?출력 , 아니면 영어 대문자로 출력
 */
