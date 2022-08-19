@@ -1,0 +1,26 @@
+# 12605번 단어순서 뒤집기 https://www.acmicpc.net/problem/12605
+```python
+# 입력
+# 3
+# this is a test
+# foobar
+# all your base
+
+# = = = = = = = = = = = = = = = = =
+
+import sys
+n = int(sys.stdin.readline())
+data = [sys.stdin.readline().strip() for _ in range(n)]
+
+# print(n,data)
+
+for n in range(n):
+  print(f"Case #{n+1}: " + " ".join(data[n].rstrip().split()[::-1]))
+
+# = = = = = = = = = = = = = = = = =
+
+# 출력
+# Case #1: test a is this
+# Case #2: foobar
+# Case #3: base your all
+```
